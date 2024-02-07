@@ -1,106 +1,130 @@
 # SandDance
 
-Visually explore, understand, and present your data.
+直观地探索、理解和呈现您的数据。
 
 ![sanddance-animation](https://user-images.githubusercontent.com/11507384/189461831-9467863e-bff8-47d2-aa03-ab2b74658814.gif)
 
-By using easy-to-understand views, SandDance helps you find insights about your data, which in turn help you tell stories supported by data, build cases based on evidence, test hypotheses, dig deeper into surface explanations, support decisions for purchases, or relate data into a wider, real world context.
-
-SandDance uses unit visualizations, which apply a one-to-one mapping between rows in your database and marks on the screen.
-Smooth animated transitions between views help you to maintain context as you interact with your data.
-
-> This new version of SandDance has been rebuilt from scratch with the goal of being modular, extensible, and embeddable into your custom applications. We are now on GitHub so that we are open and driven by the community through contributions, feature requests, and discussion.
-
-SandDance was created by the [Microsoft Research VIDA Group](https://aka.ms/vida) which explores novel technologies for visualization and immersive data analytics.
-
-## Where can I use SandDance?
-* [Try it now on the web](https://microsoft.github.io/SandDance/app/)
-* Microsoft apps:
-  * [Power BI](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000430) - [*see additional info*](https://github.com/microsoft/SandDance/blob/master/powerbi.md)
-  * [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/sanddance-extension?view=sql-server-2017)
-  * [VSCode extension](https://marketplace.visualstudio.com/items?itemName=msrvida.vscode-sanddance)
-* 3rd Party apps:
-  * [Observable](https://observablehq.com/collection/@danmarshall/sanddance)
-  * [HASH Core IDE](https://core.hash.ai/) - [*see 'Step Explorer' documentation*](https://docs.hash.ai/core/creating-simulations/views#step-explorer)
-* In your own JavaScript apps - see below
-
-## Component architecture
-
-SandDance is an offering of several JavaScript components:
-
-* [sanddance](packages/sanddance/README.md) - the core SandDance visualization canvas.
-* [sanddance-specs](packages/sanddance-specs/README.md) - [Vega specifications](https://vega.github.io/vega/docs/specification/) for unit visualizations.
-* [sanddance-react](packages/sanddance-react/README.md) - the core SandDance visualization canvas for use in React based applications.
-* [sanddance-explorer](packages/sanddance-explorer/README.md) - the core SandDance visualization canvas with UI to enable data exploration, for use in React based applications.
-* [sanddance-embed](packages/sanddance-embed/README.md) - the easiest way to embed SandDance Explorer in your applications, via an `<iframe>` tag.
-
-## Publications
-
-* 2018 - [Atom: A Grammar for Unit Visualizations](https://www.microsoft.com/en-us/research/uploads/prod/2019/01/atom.pdf)
-  * Deokgun Park, Steven Drucker, Roland Fernandez, Niklas Elmqvist
-  * IEEE Transactions on Visualization and Computer Graphics | December 2018, Vol 24(12): pp. 3032-3043
-* 2015 - [A Unifying Framework for Animated and Interactive Unit Visualizations](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/sanddance.pdf)
-  * Steven Drucker, Roland Fernandez 
-  * MSR-TR-2015-65 | August 2015
-
-## Articles & videos
-
-* [SandDance project @ Microsoft Research](https://www.microsoft.com/en-us/research/project/sanddance/)
-* [Microsoft Research webinar / Data Visualization: Bridging the Gap Between Users and Information](https://note.microsoft.com/MSR-Webinar-Data-Visualization-Registration-On-Demand.html).
-* [SQL Server Blog / The August release of Azure Data Studio is now available](https://cloudblogs.microsoft.com/sqlserver/2019/08/15/the-august-release-of-azure-data-studio-is-now-available/)
-* [Open Source Blog / What’s new in SandDance 3](https://cloudblogs.microsoft.com/opensource/2020/06/23/whats-new-sanddance-3-microsoft-research/)
-* [Channel 9 - Data Exposed / Introducing SandDance: Data Visualization in Azure Data Studio](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SandDance-Data-Visualization-in-Azure-Data-Studio)
-* [Channel 9 - Data Exposed / What is SandDance?](https://channel9.msdn.com/Shows/Data-Exposed/What-is-SandDance)
-* [Hacker News / Microsoft open sources SandDance, a visual data exploration tool](https://news.ycombinator.com/item?id=21224685)
-* [analyticsindiamag.com / Visualizations With SandDance Using Visual Studio Code](https://analyticsindiamag.com/visualizations-with-sanddance-using-visual-studio-code/)
-* [codeburst.io / Exploring Titanic Dataset using Microsoft’s Sandance](https://codeburst.io/exploring-titanic-dataset-using-microsofts-sandance-175eb04b3ac2)
-* [mathkuro.com / VS Codeのイケメンすぎる分析＆可視化ツールSand Danceの使い方](https://www.mathkuro.com/vs-code/sand-dance/)
-* [mathkuro.com / 【SandDanceグラフサンプル】用途に合わせて選択しましょう◎](https://www.mathkuro.com/vs-code/sanddance-charts/)
-* [medium.com - @sefaoguzsaglam / how to start data visualizing with Microsoft’s SandDance (for beginners)](https://medium.com/@sefaoguzsaglam/how-to-start-data-visualizing-with-microsofts-sanddance-for-beginners-abe5c0552750)
-* [mssqltips.com / SandDance for Azure Data Studio](https://www.mssqltips.com/sqlservertip/6045/sanddance-for-azure-data-studio/)
-* [sqlshack.com / Exploring the SandDance Visualizations extension in Azure Data Studio](https://www.sqlshack.com/exploring-the-sanddance-visualizations-extension-in-azure-data-studio/)
-* [torbjornzetterlund.com / I got to do some SandDance visualization](https://torbjornzetterlund.com/i-got-to-do-some-sanddance-vizualisation/)
-* [YouTube - Anjani Prasad Atluri / SandDance: A tutorial](https://www.youtube.com/watch?v=sI4WIQEz07w)
-* [YouTube - BI Tracks / SandDance Visualizations Tutorial - Azure Data Studio](https://www.youtube.com/watch?v=iUhvYMggzAQ)
-
-## Changelog
-
-* July 2022 - Major version bump to v4: Now using MorphCharts.
-* June 2020 - Major version bump to v3: Now using Deck.gl@8.
-* December 2019 - Major version bump to v2: Now using Vega@5.
-* August 2019 - Initial release to AppSource (Power BI marketplace).
-* April 2019 - Initial release to GitHub.
-
-## Known issues
-
-* Animations require a WebGL2 enabled browser.
-
-## Roadmap
-
-* ~~PowerBI custom visual based on this new architecture.~~ done!
-* ~~Additional views, such as stacks.~~ done!
-* Code examples and tutorials.
-* ~~Faceting for all chart types.~~ done!
-* Better date handling.
-
-## Dependencies
-
-SandDance is created with open source libraries, using [Vega](https://vega.github.io) for chart layout.
-
-## Development
-
-See [dev.md](dev.md)
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><h1 tabindex="-1" dir="auto" class=""><a id="user-content-sanddance" class="anchor" aria-hidden="true" tabindex="-1" href="#sanddance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">沙舞</font></font></h1>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">直观地探索、理解和呈现您的数据。</font></font></p>
+<p dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/11507384/189461831-9467863e-bff8-47d2-aa03-ab2b74658814.gif" data-target="animated-image.originalLink"><img src="https://user-images.githubusercontent.com/11507384/189461831-9467863e-bff8-47d2-aa03-ab2b74658814.gif" alt="沙舞动画" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      <span class="AnimatedImagePlayer" data-target="animated-image.player" hidden="">
+        <a data-target="animated-image.replacedLink" class="AnimatedImagePlayer-images" href="https://user-images.githubusercontent.com/11507384/189461831-9467863e-bff8-47d2-aa03-ab2b74658814.gif" target="_blank">
+          
+        <span data-target="animated-image.imageContainer">
+            <img data-target="animated-image.replacedImage" alt="sanddance-animation" class="AnimatedImagePlayer-animatedImage" src="https://user-images.githubusercontent.com/11507384/189461831-9467863e-bff8-47d2-aa03-ab2b74658814.gif" style="display: block; opacity: 1;">
+          <canvas class="AnimatedImagePlayer-stillImage" aria-hidden="true" width="683" height="512"></canvas></span></a>
+        <button data-target="animated-image.imageButton" class="AnimatedImagePlayer-images" tabindex="-1" aria-label="Play sanddance-animation" hidden=""></button>
+        <span class="AnimatedImagePlayer-controls" data-target="animated-image.controls" hidden="">
+          <button data-target="animated-image.playButton" class="AnimatedImagePlayer-button" aria-label="Play sanddance-animation">
+            <svg aria-hidden="true" focusable="false" class="octicon icon-play" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 13.5427V2.45734C4 1.82607 4.69692 1.4435 5.2295 1.78241L13.9394 7.32507C14.4334 7.63943 14.4334 8.36057 13.9394 8.67493L5.2295 14.2176C4.69692 14.5565 4 14.1739 4 13.5427Z">
+            </path></svg>
+            <svg aria-hidden="true" focusable="false" class="octicon icon-pause" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="3" height="12" rx="1"></rect>
+              <rect x="9" y="2" width="3" height="12" rx="1"></rect>
+            </svg>
+          </button>
+          <a data-target="animated-image.openButton" aria-label="Open sanddance-animation in new window" class="AnimatedImagePlayer-button" href="https://user-images.githubusercontent.com/11507384/189461831-9467863e-bff8-47d2-aa03-ab2b74658814.gif" target="_blank">
+            <svg aria-hidden="true" class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+              <path fill-rule="evenodd" d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z"></path>
+            </svg>
+          </a>
+        </span>
+      </span></animated-image></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过使用易于理解的视图，SandDance 可以帮助您找到有关数据的见解，从而帮助您讲述由数据支持的故事、基于证据构建案例、测试假设、深入挖掘表面解释、支持购买决策，或将数据与更广泛的现实世界背景联系起来。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SandDance 使用单位可视化，在数据库中的行和屏幕上的标记之间应用一对一的映射。</font><font style="vertical-align: inherit;">视图之间的平滑动画转换可帮助您在与数据交互时保持上下文。</font></font></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这个新版本的 SandDance 已经从头开始重建，其目标是模块化、可扩展并可嵌入到您的自定义应用程序中。</font><font style="vertical-align: inherit;">我们现在在 GitHub 上，因此我们是开放的，并通过贡献、功能请求和讨论受到社区的推动。</font></font></p>
+</blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://aka.ms/vida" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SandDance 由微软研究院 VIDA 小组</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">创建</font><font style="vertical-align: inherit;">，该小组致力于探索可视化和沉浸式数据分析的新技术。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-where-can-i-use-sanddance" class="anchor" aria-hidden="true" tabindex="-1" href="#where-can-i-use-sanddance"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在哪里可以使用 SandDance？</font></font></h2>
+<ul dir="auto">
+<li><a href="https://microsoft.github.io/SandDance/app/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在就在网络上尝试一下</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微软应用程序：
+</font></font><ul dir="auto">
+<li><a href="https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA200000430" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Power BI</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -</font></font><a href="https://github.com/microsoft/SandDance/blob/master/powerbi.md"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查看附加信息</font></font></em></a></li>
+<li><a href="https://docs.microsoft.com/en-us/sql/azure-data-studio/sanddance-extension?view=sql-server-2017" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Azure 数据工作室</font></font></a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=msrvida.vscode-sanddance" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VSCode 扩展</font></font></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3rd 方应用程序：
+</font></font><ul dir="auto">
+<li><a href="https://observablehq.com/collection/@danmarshall/sanddance" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可观察的</font></font></a></li>
+<li><a href="https://core.hash.ai/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HASH Core IDE</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -</font></font><a href="https://docs.hash.ai/core/creating-simulations/views#step-explorer" rel="nofollow"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅“Step Explorer”文档</font></font></em></a></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在您自己的 JavaScript 应用程序中 - 见下文</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-component-architecture" class="anchor" aria-hidden="true" tabindex="-1" href="#component-architecture"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">组件架构</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SandDance 提供了多个 JavaScript 组件：</font></font></p>
+<ul dir="auto">
+<li><a href="/microsoft/SandDance/blob/main/packages/sanddance/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sanddance</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - SandDance 可视化画布的核心。</font></font></li>
+<li><a href="/microsoft/SandDance/blob/main/packages/sanddance-specs/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sanddance-specs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> -用于单元可视化的</font></font><a href="https://vega.github.io/vega/docs/specification/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vega 规范</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="/microsoft/SandDance/blob/main/packages/sanddance-react/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sanddance-react</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - SandDance 核心可视化画布，用于基于 React 的应用程序。</font></font></li>
+<li><a href="/microsoft/SandDance/blob/main/packages/sanddance-explorer/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sanddance-explorer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - SandDance 核心可视化画布，带有 UI 可实现数据探索，可在基于 React 的应用程序中使用。</font></font></li>
+<li><a href="/microsoft/SandDance/blob/main/packages/sanddance-embed/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sanddance-embed</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 通过标签将 SandDance Explorer 嵌入应用程序的最简单方法</font></font><code>&lt;iframe&gt;</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-publications" class="anchor" aria-hidden="true" tabindex="-1" href="#publications"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">刊物</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018 - </font></font><a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/01/atom.pdf" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Atom：单元可视化语法</font></font></a>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">朴德根、史蒂文·德鲁克、罗兰·费尔南德斯、尼克拉斯·埃尔姆奎斯特</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IEEE 可视化和计算机图形学汇刊 | </font><font style="vertical-align: inherit;">2018 年 12 月，第 24 卷(12)：第 3032-3043 页</font></font></li>
+</ul>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2015 -</font></font><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/sanddance.pdf" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">动画和交互式单元可视化的统一框架</font></font></a>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">史蒂文·德鲁克、罗兰·费尔南德斯</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MSR-TR-2015-65 | </font><font style="vertical-align: inherit;">2015年8月</font></font></li>
+</ul>
+</li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-articles--videos" class="anchor" aria-hidden="true" tabindex="-1" href="#articles--videos"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文章和视频</font></font></h2>
+<ul dir="auto">
+<li><a href="https://www.microsoft.com/en-us/research/project/sanddance/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SandDance 项目@微软研究院</font></font></a></li>
+<li><a href="https://note.microsoft.com/MSR-Webinar-Data-Visualization-Registration-On-Demand.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微软研究院网络研讨会/数据可视化：弥合用户和信息之间的差距</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="https://cloudblogs.microsoft.com/sqlserver/2019/08/15/the-august-release-of-azure-data-studio-is-now-available/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SQL Server 博客 / Azure Data Studio 8 月版现已推出</font></font></a></li>
+<li><a href="https://cloudblogs.microsoft.com/opensource/2020/06/23/whats-new-sanddance-3-microsoft-research/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开源博客 / SandDance 3 的新增功能</font></font></a></li>
+<li><a href="https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SandDance-Data-Visualization-in-Azure-Data-Studio" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">第 9 频道 - 数据公开/SandDance 简介：Azure Data Studio 中的数据可视化</font></font></a></li>
+<li><a href="https://channel9.msdn.com/Shows/Data-Exposed/What-is-SandDance" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">频道 9 - 数据公开 / 什么是 SandDance？</font></font></a></li>
+<li><a href="https://news.ycombinator.com/item?id=21224685" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">黑客新闻 / 微软开源可视化数据探索工具 SandDance</font></font></a></li>
+<li><a href="https://analyticsindiamag.com/visualizations-with-sanddance-using-visual-studio-code/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Analyticsindiamag.com / 使用 Visual Studio Code 通过 SandDance 进行可视化</font></font></a></li>
+<li><a href="https://codeburst.io/exploring-titanic-dataset-using-microsofts-sandance-175eb04b3ac2" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">codeburst.io / 使用 Microsoft Sandance 探索泰坦尼克号数据集</font></font></a></li>
+<li><a href="https://www.mathkuro.com/vs-code/sand-dance/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mathkuro.com / VS Codeのイケメンすぎる分析＆可视化ツール沙舞の使い方</font></font></a></li>
+<li><a href="https://www.mathkuro.com/vs-code/sanddance-charts/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mathkuro.com / 【SandDanceグラfuサンプル】用途に合わせて选択しましょう◎</font></font></a></li>
+<li><a href="https://medium.com/@sefaoguzsaglam/how-to-start-data-visualizing-with-microsofts-sanddance-for-beginners-abe5c0552750" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">medium.com - @sefaoguzsaglam / 如何使用 Microsoft 的 SandDance 开始数据可视化（适合初学者）</font></font></a></li>
+<li><a href="https://www.mssqltips.com/sqlservertip/6045/sanddance-for-azure-data-studio/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mssqltips.com / Azure Data Studio 的 SandDance</font></font></a></li>
+<li><a href="https://www.sqlshack.com/exploring-the-sanddance-visualizations-extension-in-azure-data-studio/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sqlshack.com / 探索 Azure Data Studio 中的 SandDance 可视化扩展</font></font></a></li>
+<li><a href="https://torbjornzetterlund.com/i-got-to-do-some-sanddance-vizualisation/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">torbjornzetterlund.com / 我必须做一些 SandDance 可视化</font></font></a></li>
+<li><a href="https://www.youtube.com/watch?v=sI4WIQEz07w" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube - Anjani Prasad Atluri / SandDance：教程</font></font></a></li>
+<li><a href="https://www.youtube.com/watch?v=iUhvYMggzAQ" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">YouTube - BI 曲目/SandDance 可视化教程 - Azure Data Studio</font></font></a></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-changelog" class="anchor" aria-hidden="true" tabindex="-1" href="#changelog"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">变更日志</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2022 年 7 月 - 主要版本升级到 v4：现在使用 MorphCharts。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2020 年 6 月 - 主要版本升级至 v3：现在使用 Deck.gl@8。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019 年 12 月 - 主要版本升级至 v2：现在使用 Vega@5。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019 年 8 月 - 首次发布到 AppSource（Power BI 市场）。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019 年 4 月 - 首次发布到 GitHub。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-known-issues" class="anchor" aria-hidden="true" tabindex="-1" href="#known-issues"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已知的问题</font></font></h2>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">动画需要支持 WebGL2 的浏览器。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-roadmap" class="anchor" aria-hidden="true" tabindex="-1" href="#roadmap"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">路线图</font></font></h2>
+<ul dir="auto">
+<li><del><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于这种新架构的 PowerBI 自定义视觉效果。</font></font></del><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完毕！</font></font></li>
+<li><del><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他视图，例如堆栈。</font></font></del><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完毕！</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">代码示例和教程。</font></font></li>
+<li><del><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">适用于所有图表类型的分面。</font></font></del><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完毕！</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更好的日期处理。</font></font></li>
+</ul>
+<h2 tabindex="-1" dir="auto"><a id="user-content-dependencies" class="anchor" aria-hidden="true" tabindex="-1" href="#dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖关系</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SandDance 使用开源库创建，使用</font></font><a href="https://vega.github.io" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vega</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进行图表布局。</font></font></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-development" class="anchor" aria-hidden="true" tabindex="-1" href="#development"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参见</font></font><a href="/microsoft/SandDance/blob/main/dev.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dev.md</font></font></a></p>
+<h2 tabindex="-1" dir="auto"><a id="user-content-contributing" class="anchor" aria-hidden="true" tabindex="-1" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该项目欢迎贡献和建议。</font><font style="vertical-align: inherit;">大多数贡献都要求您同意贡献者许可协议 (CLA)，声明您有权并且实际上授予我们使用您的贡献的权利。</font><font style="vertical-align: inherit;">有关详细信息，请访问</font></font><a href="https://cla.microsoft.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://cla.microsoft.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">当您提交拉取请求时，CLA-bot 将自动确定您是否需要提供 CLA 并适当地装饰 PR（例如标签、评论）。</font><font style="vertical-align: inherit;">只需按照机器人提供的说明进行操作即可。</font><font style="vertical-align: inherit;">您只需使用我们的 CLA 在所有存储库中执行一次此操作。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该项目采用了</font></font><a href="https://opensource.microsoft.com/codeofconduct/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">微软开源行为准则</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">有关详细信息，请参阅</font></font><a href="https://opensource.microsoft.com/codeofconduct/faq/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">行为准则常见问题解答</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或联系</font></font><a href="mailto:opencode@microsoft.com"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">opencode@microsoft.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提出任何其他问题或意见。</font></font></p>
+</article></div>
